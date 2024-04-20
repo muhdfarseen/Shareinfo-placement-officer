@@ -1,7 +1,8 @@
 # React + Vite
 
-to run enter folowing commands
+## to run server
+### enter folowing commands
 
->> npm i
+>> `npm i`
 
->> npm run dev
+>> `npm run dev`

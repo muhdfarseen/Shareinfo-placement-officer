@@ -18,8 +18,8 @@
   height: rem(50px);
   border-radius: var(--mantine-radius-md);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
 
   &:hover {

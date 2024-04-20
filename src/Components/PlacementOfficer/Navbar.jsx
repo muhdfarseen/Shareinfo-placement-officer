@@ -51,16 +51,17 @@ export const Navbar = () => {
   ));
 
   useEffect(() => {
-    // Navigate to the active link's URL when active state changes
     navigate(mockdata[active].to);
   }, [active, navigate]);
 
   return (
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
-        <Stack justify="center" gap={0}>
+        <Stack justify="center" align='center' gap={0}>
           {links}
         </Stack>
+        
+        
       </div>
     </nav>
   );
