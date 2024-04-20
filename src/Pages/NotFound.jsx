@@ -9,7 +9,6 @@ export const NotFound = () => {
     navigate("/dashboard")
   }
 
-
   return (
     <Flex h={"100vh"} justify={"center"} align={"center"} direction={"column"} gap={20}>
        <Title order={1} opacity={"20%"} >404</Title>
