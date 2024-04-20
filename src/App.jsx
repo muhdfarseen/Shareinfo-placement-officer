@@ -1,12 +1,12 @@
-import { useState } from "react";
-import { LogiinPlacementOfficer } from "../Pages/PlacementOfficer/LogiinPlacementOfficer";
+import React from 'react'
+import { DashBoardPlacementOfficer } from './Pages/PlacementOfficer/DashBoardPlacementOfficer'
 
 function App() {
   return (
-    <>
-      <LogiinPlacementOfficer />
-    </>
-  );
+    <div>
+      <DashBoardPlacementOfficer/>
+    </div>
+  )
 }
 
-export default App;
+export default App

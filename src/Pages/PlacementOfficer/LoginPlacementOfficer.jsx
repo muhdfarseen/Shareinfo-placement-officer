@@ -14,7 +14,7 @@ import {
 import PlacementOfficerLoginImage from "../../Images/PlacementOfficerLogin.png";
 import { GoogleButton } from "../../Components/PlacementOfficer/GoogleButton";
 
-export const LogiinPlacementOfficer = () => {
+export const LoginPlacementOfficer = () => {
   return (
     <div>
       <Flex h={"100vh"} justify={"center"} align={"center"}>
