@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Center, Tooltip, UnstyledButton, Stack, rem, Image } from '@mantine/core';
 import {
   IconHome2,
@@ -11,39 +11,49 @@ import {
   IconLogout,
   IconSwitchHorizontal,
 } from '@tabler/icons-react';
+import { Link, useNavigate } from 'react-router-dom'; 
 import classes from './Navbar.module.css';
 
-function NavbarLink({ icon: Icon, label, active, onClick }) {
+function NavbarLink({ icon: Icon, label, active, to, onClick }) {
   return (
     <Tooltip label={label} position="right" transitionProps={{ duration: 0 }}>
-      <UnstyledButton onClick={onClick} className={classes.link} data-active={active || undefined}>
-        <Icon style={{ width: rem(20), height: rem(20) }} stroke={1.5} />
-      </UnstyledButton>
+      <Link onClick={onClick} to={to} className={classes.link} data-active={active || undefined}>
+        <UnstyledButton >
+          <Icon style={{ width: rem(20), height: rem(20) }} stroke={1.5} />
+        </UnstyledButton>
+      </Link>
     </Tooltip>
   );
 }
 
 const mockdata = [
-  { icon: IconHome2, label: 'Home' },
-  { icon: IconUsers, label: 'Candidates' },
-  { icon: IconBriefcase, label: 'Placements' },
-  { icon: IconCalendarStats, label: 'Announcements' },
-  { icon: IconChecklist, label: 'Trainings' },
-  { icon: IconSettings, label: 'Settings' },
+  { icon: IconHome2, label: 'Home', to: '/dashboard/home' },
+  { icon: IconUsers, label: 'Candidates', to: '/dashboard/candidates' },
+  { icon: IconBriefcase, label: 'Placements', to: '/dashboard/placements' },
+  { icon: IconCalendarStats, label: 'Announcements', to: '/dashboard/announcements' },
+  { icon: IconChecklist, label: 'Trainings', to: '/dashboard/trainings' },
+  { icon: IconSettings, label: 'Settings', to: '/dashboard/settings' },
 ];
 
 export const Navbar = () => {
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(0);
+  const navigate = useNavigate();
 
   const links = mockdata.map((link, index) => (
     <NavbarLink
       icon={link.icon}
       label={link.label}
+      to={link.to}
       active={index === active}
       onClick={() => setActive(index)}
       key={link.label}
     />
   ));
+
+  useEffect(() => {
+    // Navigate to the active link's URL when active state changes
+    navigate(mockdata[active].to);
+  }, [active, navigate]);
 
   return (
     <nav className={classes.navbar}>
