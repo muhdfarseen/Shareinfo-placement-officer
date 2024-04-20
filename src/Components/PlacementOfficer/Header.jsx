@@ -5,7 +5,7 @@ import {
   Text,
   Image,
 } from "@mantine/core";
-import ShareInfoLogo from "../../../public/SIfav.png";
+import ShareInfoLogo from "/SIfav.png";
 import classes from "./Header.module.css";
 import { useNavigate } from "react-router-dom";
 
