@@ -1,12 +1,15 @@
-import React from 'react'
-import { DashBoardPlacementOfficer } from './Pages/PlacementOfficer/DashBoardPlacementOfficer'
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { routes } from "./Routes";
 
 function App() {
+  const browserRouter = createBrowserRouter(routes);
+
   return (
-    <div>
-      <DashBoardPlacementOfficer/>
-    </div>
-  )
+    <>
+      <RouterProvider router={browserRouter} />
+    </>
+  );
 }
 
-export default App
+export default App;

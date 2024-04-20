@@ -25,8 +25,9 @@ import {
   IconSwitchHorizontal,
   IconChevronDown,
 } from "@tabler/icons-react";
-import MantineLogo from "/SIfav.png";
+import ShareInfoLogo from "../../../public/SIfav.png";
 import classes from "./Header.module.css";
+import { useNavigate } from "react-router-dom";
 
 const user = {
   name: "Jane Spoonfighter",
@@ -40,10 +41,15 @@ export const Header = () => {
   const [opened, { toggle }] = useDisclosure(false);
   const [userMenuOpened, setUserMenuOpened] = useState(false);
 
+  const navigate = useNavigate();
+  const handlelogout = () =>{
+    navigate("/")
+  }
+
   return (
     <div className={classes.header}>
      
-        <Image src={MantineLogo} w={40} />
+        <Image src={ShareInfoLogo} h={40} />
 
         <Menu
           position="bottom-end"
@@ -87,7 +93,7 @@ export const Header = () => {
             >
               Account settings
             </Menu.Item>
-            <Menu.Item
+            {/* <Menu.Item
               leftSection={
                 <IconSwitchHorizontal
                   style={{ width: rem(16), height: rem(16) }}
@@ -96,7 +102,7 @@ export const Header = () => {
               }
             >
               Notificaton
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item
               leftSection={
                 <IconLogout
@@ -104,6 +110,7 @@ export const Header = () => {
                   stroke={1.5}
                 />
               }
+              onClick={handlelogout}
             >
               Logout
             </Menu.Item>

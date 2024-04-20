@@ -13,8 +13,16 @@ import {
 } from "@mantine/core";
 import PlacementOfficerLoginImage from "../../Images/PlacementOfficerLogin.png";
 import { GoogleButton } from "../../Components/PlacementOfficer/GoogleButton";
+import { useNavigate } from "react-router-dom";
 
 export const LoginPlacementOfficer = () => {
+
+  const navigate = useNavigate();
+  const handlelogin = () => {
+    navigate("/dashboard")
+  }
+
+
   return (
     <div>
       <Flex h={"100vh"} justify={"center"} align={"center"}>
@@ -37,7 +45,7 @@ export const LoginPlacementOfficer = () => {
               <Input radius={"xl"} />
             </Input.Wrapper>
             <PasswordInput radius={"xl"} label="Password" />
-            <Button fullWidth radius={"xl"}>
+            <Button fullWidth radius={"xl"} onClick={handlelogin}>
               Log in
             </Button>
             <Group gap={5}>
