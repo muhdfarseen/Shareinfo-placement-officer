@@ -5,7 +5,7 @@ import {
   IconUsers,
   IconBriefcase,
   IconFingerprint,
-  IconCalendarStats,
+  IconAlarmAverage,
   IconChecklist,
   IconSettings,
   IconLogout,
@@ -30,13 +30,16 @@ const mockdata = [
   { icon: IconHome2, label: 'Home', to: '/dashboard/home' },
   { icon: IconUsers, label: 'Candidates', to: '/dashboard/candidates' },
   { icon: IconBriefcase, label: 'Placements', to: '/dashboard/placements' },
-  { icon: IconCalendarStats, label: 'Announcements', to: '/dashboard/announcements' },
+  { icon: IconAlarmAverage, label: 'Announcements', to: '/dashboard/announcements' },
   { icon: IconChecklist, label: 'Trainings', to: '/dashboard/trainings' },
   { icon: IconSettings, label: 'Settings', to: '/dashboard/settings' },
 ];
 
 export const Navbar = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(() => {
+    const storedActiveIndex = localStorage.getItem('activeIndex');
+    return storedActiveIndex !== null ? parseInt(storedActiveIndex) : 0;
+  });
   const navigate = useNavigate();
 
   const links = mockdata.map((link, index) => (
@@ -45,7 +48,10 @@ export const Navbar = () => {
       label={link.label}
       to={link.to}
       active={index === active}
-      onClick={() => setActive(index)}
+      onClick={() => {
+        setActive(index);
+        localStorage.setItem('activeIndex', index);
+      }}
       key={link.label}
     />
   ));
@@ -60,8 +66,6 @@ export const Navbar = () => {
         <Stack justify="center" align='center' gap={0}>
           {links}
         </Stack>
-        
-        
       </div>
     </nav>
   );
