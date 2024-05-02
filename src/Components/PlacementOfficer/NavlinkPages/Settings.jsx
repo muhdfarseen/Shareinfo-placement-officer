@@ -1,7 +1,14 @@
 import React from 'react'
 import { Flex, Button, Text, Title } from '@mantine/core';
+import { useNavigate } from 'react-router-dom';
 
 export const Settings = () => {
+
+  const Navigate = useNavigate();
+  const HandleLogOut = () => {
+    Navigate("/")
+  }
+
   return (
     <div>
       <Title order={3}>Settings</Title>
@@ -13,7 +20,7 @@ export const Settings = () => {
         <Text td="underline" style={{ cursor: "pointer" }} c={"dimmed"} ta="center">
           Connect our Support team for any Assistance
         </Text>
-        <Button color='red' radius={"md"} >Sign Out</Button>
+        <Button onClick={HandleLogOut} color='red' radius={"md"} >Sign Out</Button>
       </Flex>
 
     </div>

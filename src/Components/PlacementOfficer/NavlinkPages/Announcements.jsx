@@ -43,8 +43,6 @@ const RecentAnnouncementsData = [
     Date: "04 Oct. 2023 | 15:40",
     Desc: "Calling all aspiring tech wizards! Don't miss your chance to launch your career at ITL Ltd., a leading force in the software industry. Known for [mention key company values or achievements], they're visiting your campus on [Date] for an exciting placement drive, seeking talented individuals like you for roles in [list of departments or job titles]."
   },
-
-
 ]
 
 
@@ -60,11 +58,11 @@ export const Announcements = () => {
           <Title order={5}>Create An Announcement</Title>
           <TextInput
             label="Announcement Title"
-            placeholder="enter the announcement title here!"
+            placeholder="Enter the announcement title here!"
           />
           <Textarea
             label="Description (Optional)"
-            placeholder="enter the announcement description here!"
+            placeholder="Enter the announcement description here!"
             autosize
             minRows={5}
           />

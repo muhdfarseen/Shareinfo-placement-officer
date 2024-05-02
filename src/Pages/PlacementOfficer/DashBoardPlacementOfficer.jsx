@@ -16,7 +16,7 @@ export const DashBoardPlacementOfficer = () => {
           w="100%"
           bg="light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6))"
         >
-          <ScrollArea scrollbarSize={4} h="calc(100vh - 100px" offsetScrollbars>
+          <ScrollArea scrollbarSize={4} h="calc(100vh - 100px" >
             <Outlet/>
           </ScrollArea>
         </Box>

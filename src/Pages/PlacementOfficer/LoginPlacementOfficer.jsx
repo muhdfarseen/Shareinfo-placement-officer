@@ -12,7 +12,6 @@ import {
   Button,
 } from "@mantine/core";
 import PlacementOfficerLoginImage from "../../Images/PlacementOfficerLogin.png";
-import { GoogleButton } from "../../Components/PlacementOfficer/GoogleButton";
 import { useNavigate } from "react-router-dom";
 
 export const LoginPlacementOfficer = () => {
@@ -35,11 +34,9 @@ export const LoginPlacementOfficer = () => {
         <Flex w={"70%"} justify={"center"} align={"center"} p={"lg"}>
           <Flex direction={"column"} w={{ xs: "300", sm: "450" }} gap={20}>
             <Title order={2}>Sign in to shareinfo</Title>
-            <GoogleButton radius="xl">Sign in with Google</GoogleButton>
+           
 
-            <Group grow justify="space-between">
-              <Divider label="or sign in with email" labelPosition="center" />
-            </Group>
+            
 
             <Input.Wrapper label="Username or Email">
               <Input radius={"xl"} />

@@ -36,10 +36,7 @@ const mockdata = [
 ];
 
 export const Navbar = () => {
-  const [active, setActive] = useState(() => {
-    const storedActiveIndex = localStorage.getItem('activeIndex');
-    return storedActiveIndex !== null ? parseInt(storedActiveIndex) : 0;
-  });
+  const [active, setActive] = useState((0) )
   const navigate = useNavigate();
 
   const links = mockdata.map((link, index) => (
@@ -50,7 +47,6 @@ export const Navbar = () => {
       active={index === active}
       onClick={() => {
         setActive(index);
-        localStorage.setItem('activeIndex', index);
       }}
       key={link.label}
     />

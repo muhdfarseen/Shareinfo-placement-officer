@@ -20,6 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
 
   &:hover {
@@ -36,4 +37,6 @@
       color: var(--mantine-color-blue-light-color);
     }
   }
+
+  
 }

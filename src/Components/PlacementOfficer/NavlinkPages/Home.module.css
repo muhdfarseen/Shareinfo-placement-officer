@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-radius: var(--mantine-radius-md);
+    border-radius: var(--mantine-radius-lg);
     height: rem(190px);
    
     background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
@@ -25,6 +25,17 @@
   
     &:hover {
       box-shadow: var(--mantine-shadow-md);
-      transform: scale(1.05);
+      transform: scaleY(1.05);
+    }
+  }
+
+  .hoverScale{
+    transition:
+      box-shadow 150ms ease,
+      transform 100ms ease;
+    &:hover {
+      box-shadow: var(--mantine-shadow-md);
+      transform: scaleY(1.05);
+      cursor: pointer;
     }
   }
