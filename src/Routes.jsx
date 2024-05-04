@@ -23,6 +23,8 @@ const Announcements = Loadable(lazy(() => import("./Components/PlacementOfficer/
 const AddNewDrive = Loadable(lazy(() => import("./Components/PlacementOfficer/NavlinkPages/Placements/AddNewDrives").then(module => ({ default: module.AddNewDrives }))));
 const AllDrives = Loadable(lazy(() => import("./Components/PlacementOfficer/NavlinkPages/Placements/AllDrives").then(module => ({ default: module.AllDrives }))));
 const OnGoingDrive = Loadable(lazy(() => import("./Components/PlacementOfficer/NavlinkPages/Placements/OnGoingDrive").then(module => ({ default: module.OnGoingDrive }))));
+const CandidateProfile = Loadable(lazy(() => import("./Components/PlacementOfficer/NavlinkPages/Candidates/CandidateProfile").then(module => ({ default: module.CandidateProfile }))));
+
 
 export const routes = [
   {
@@ -44,7 +46,10 @@ export const routes = [
 
       { path: 'placements-alldrives', element: < AllDrives /> },
       { path: 'placements-addnewdrive', element: < AddNewDrive /> },
-      { path: 'placements-ongoingdrive', element: < OnGoingDrive /> }
+      { path: 'placements-ongoingdrive', element: < OnGoingDrive /> },
+
+      { path: 'candidates-profile', element: < CandidateProfile /> }
+
     ],
   },
   {

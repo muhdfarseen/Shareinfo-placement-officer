@@ -37,5 +37,14 @@
       box-shadow: var(--mantine-shadow-md);
       transform: scaleY(1.05);
       cursor: pointer;
+      z-index: 1;
     }
   }
+
+  .activeCard{
+    box-shadow: var(--mantine-shadow-md);
+    transform: scaleY(1.05);
+    z-index: 2;
+    
+  }
+
