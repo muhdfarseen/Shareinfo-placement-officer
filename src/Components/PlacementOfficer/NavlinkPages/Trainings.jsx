@@ -55,11 +55,11 @@ export const Trainings = () => {
     <div>
       <Flex justify={"space-between"} align={"center"}>
         <Title order={3}>Trainings</Title>
-        <Box>
+       
           <Button onClick={open} radius={"md"} leftSection={<IconSquareRoundedPlus size={20} />}>
             Add New Training
           </Button>
-        </Box>
+       
       </Flex>
 
       {/* Card looping */}

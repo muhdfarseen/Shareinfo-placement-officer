@@ -5,7 +5,7 @@ import {
   IconUsers,
   IconBriefcase,
   IconFingerprint,
-  IconAlarmAverage,
+  IconBellRinging,
   IconChecklist,
   IconSettings,
   IconLogout,
@@ -30,7 +30,7 @@ const mockdata = [
   { icon: IconHome2, label: 'Home', to: '/dashboard/home' },
   { icon: IconUsers, label: 'Candidates', to: '/dashboard/candidates' },
   { icon: IconBriefcase, label: 'Placements', to: '/dashboard/placements' },
-  { icon: IconAlarmAverage, label: 'Announcements', to: '/dashboard/announcements' },
+  { icon: IconBellRinging, label: 'Announcements', to: '/dashboard/announcements' },
   { icon: IconChecklist, label: 'Trainings', to: '/dashboard/trainings' },
   { icon: IconSettings, label: 'Settings', to: '/dashboard/settings' },
 ];

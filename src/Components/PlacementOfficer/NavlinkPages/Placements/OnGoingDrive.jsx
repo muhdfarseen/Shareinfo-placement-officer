@@ -13,16 +13,33 @@ import {
   Avatar,
   Stepper,
   Divider,
-  Button
+  Button,
+  ActionIcon
 } from "@mantine/core";
 import { IconCalendarCancel, IconCalendarDot } from '@tabler/icons-react';
+import { CandidatesTable } from './CandidatesTable';
+import { useNavigate } from 'react-router-dom';
+import { IconChevronLeft } from '@tabler/icons-react';
+
 
 
 
 export const OnGoingDrive = () => {
+
+  const Navigate = useNavigate();
+
+  const navigateback = () => {
+    Navigate("/dashboard/placements")
+  }
+
   return (
     <div>
-      <Title order={3} mb={20}>Ongoing Drive</Title>
+      <Flex gap={10} mb={20} align={"center"} >
+      <ActionIcon onClick={navigateback}  size="lg" radius="xl"  variant="default" aria-label="Settings">
+          <IconChevronLeft style={{ width: '70%', height: '70%' }} stroke={1.5} />
+        </ActionIcon>
+        <Title  order={3}>Ongoing Drive</Title>
+      </Flex>
 
       <Card p={40} withBorder radius={"lg"} >
 
@@ -104,7 +121,7 @@ export const OnGoingDrive = () => {
           </Stepper>
         </Box>
 
-        <Title order={4} >Drive Details</Title>
+        <Title order={4} mb={10} >Drive Details</Title>
 
         <Flex mt={10} justify={"space-between"} align={"center"}>
 
@@ -133,13 +150,13 @@ export const OnGoingDrive = () => {
           <Flex gap={5} direction={"column"}>
             <Text size='sm' fw={600}>Process Start Date:</Text>
             <Flex gap={5} justify={"center"} align='center'>
-              <IconCalendarDot  color='gray' />
+              <IconCalendarDot color='gray' />
               <Text size='md' fw={600} c={"gray"}>10-February-2024</Text>
             </Flex>
 
             <Text mt={10} size='sm' fw={600}>Process End Date:</Text>
             <Flex gap={5} justify={"center"} align='center'>
-              <IconCalendarCancel  color='gray' />
+              <IconCalendarCancel color='gray' />
               <Text size='md' fw={600} c={"gray"}>13-February-2024</Text>
             </Flex>
           </Flex>
@@ -148,14 +165,8 @@ export const OnGoingDrive = () => {
 
         </Flex>
 
-        <Title mt={50} order={4} >Candidates -05 Live</Title>
-
-        <Box>
-
-        </Box>
-
-
-
+        <Title mt={50} mb={10} order={4} >Candidates</Title>
+        <CandidatesTable />
 
       </Card>
 
