@@ -68,7 +68,7 @@ export const Trainings = () => {
         {TrainingsCardData.map((training, index) => (
           <Card mb={20} key={index} withBorder radius={"lg"}>
 
-              <Flex gap={20}>
+              <Flex wrap={'wrap'} gap={20}>
                 
                 <Image radius={"md"} h={90} w={90} src={training.Imgurl} />
                 <Flex flex={1} wrap={"wrap"} justify={"space-between"} gap={20}>

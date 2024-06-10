@@ -40,45 +40,42 @@ export const CandidateProfile = () => {
                 <Title order={3}>Candidate Profile</Title>
             </Flex>
 
-            <Flex gap={20} justify={"space-between"} direction={"row"}  >
+            <Flex wrap={'wrap'} gap={20} justify={"space-between"} direction={"row"}  >
 
-                <Card maw={"30%"} radius={"lg"} withBorder>
+                <Card w={{ base: "100%", xs: "100%", sm: "100%", md:"30%" }} radius={"lg"} withBorder>
                     <Flex gap={20}>
                         <Avatar size={"xl"} src={"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D"} />
                         <Flex justify={"flex-end"} align={"flex-start"} direction={"column"}>
-                            <Title order={2}>Cristina John</Title>
-                            <Text c={"dimmed"} >UI UX Designer</Text>
-                            <Group mt={4}>
-                        <Pill radius={0} variant='default' >ECE</Pill>
-                        <Pill radius={0} variant='default'>2021-2025</Pill>
-                        <Pill radius={0} variant='default'>Semester 6</Pill>
-                        <Pill radius={0} variant='default'>CE-Thalassery</Pill>
-                    </Group>
-
+                            <Title order={4}>Cristina John</Title>
+                            <Text size='sm' c={"dimmed"} >UI UX Designer</Text>
+                            <Group gap={5} mt={4}>
+                                <Pill size='xs' radius={0} variant='default' >ECE</Pill>
+                                <Pill size='xs' radius={0} variant='default'>2021-25</Pill>
+                                <Pill size='xs' radius={0} variant='default'>S 6</Pill>
+                                <Pill size='xs' radius={0} variant='default'>CE-TLY</Pill>
+                            </Group>
                         </Flex>
                     </Flex>
 
-                    
-
                     <Group mt={20} gap={10} grow>
-                        <Button variant='default' size='md' leftSection={<IconFileTypePdf />} radius={"md"} color='red'>Resume</Button>
-                        <Button variant='default' size='md' leftSection={<IconMessage />} radius={"md"} color='blue'>Message Now</Button>
+                        <Button variant='default' size='xs' leftSection={<IconFileTypePdf size={14} />} radius={"sm"} color='red'>Resume</Button>
+                        <Button variant='default' size='xs' leftSection={<IconMessage size={14} />} radius={"sm"} color='blue'>Message Now</Button>
                     </Group>
 
 
                     <Text size='sm' mt={20} fw={600} >Summary</Text>
-                    <Text mt={10}>
+                    <Text size='sm' mt={10}>
                         Aspiring Electronics & Communication whiz, wiring the future with code and circuits.
                         Proficient in [mention relevant software/hardware tools]. Project experience in
                         [mention key project achievements]. Seeking opportunities to innovate and connect
                         the world.
                     </Text>
                     <Text size='sm' mt={20} fw={600} >Skills</Text>
-                    <Group mt={10}>
-                        <Pill size='md' variant='default' >C++</Pill>
-                        <Pill size='md' variant='default'>Python</Pill>
-                        <Pill size='md' variant='default'>Java</Pill>
-                        <Pill size='md' variant='default'>Golang</Pill>
+                    <Group gap={5} mt={10}>
+                        <Pill size='xs' variant='default' >C++</Pill>
+                        <Pill size='xs' variant='default'>Python</Pill>
+                        <Pill size='xs' variant='default'>Java</Pill>
+                        <Pill size='xs' variant='default'>Golang</Pill>
                     </Group>
                     <Text size='sm' mt={20} fw={600} >Academic & Placement Details</Text>
                     <Flex mt={10} gap={20}>
@@ -98,9 +95,9 @@ export const CandidateProfile = () => {
 
                 </Card>
 
-                <Card style={{ flex: 1 }} radius={"lg"} withBorder>
-                    <Group align='flex-start' gap={25} grow>
-                        <Flex gap={10} direction={"column"} >
+                <Card flex={1} radius={"lg"} withBorder>
+                    <Flex wrap={'wrap'} gap={"sm"} direction={"row"}>
+                        <Flex flex={1} gap={10} direction={"column"} >
                             <Text size='sm' fw={600} >Projects</Text>
 
                             <Card radius={"lg"} withBorder >
@@ -132,9 +129,8 @@ export const CandidateProfile = () => {
                             </Card>
                         </Flex>
 
-                        <Flex gap={10} direction={"column"} >
+                        <Flex flex={1} gap={10} direction={"column"} >
                             <Text size='sm' fw={600} >Certification and Licenses</Text>
-
                             <Card radius={"lg"} withBorder >
                                 <Flex align={"flex-start"} gap={20} direction={"row"}>
                                     <ThemeIcon radius={"lg"} variant="light" color="red">
@@ -165,7 +161,7 @@ export const CandidateProfile = () => {
 
                         </Flex>
 
-                        <Flex gap={10} direction={"column"} >
+                        <Flex flex={1} gap={10} direction={"column"} >
                             <Text size='sm' fw={600} >Assessments</Text>
 
                             <Card radius={"lg"} withBorder >
@@ -197,7 +193,7 @@ export const CandidateProfile = () => {
                             </Card>
 
                         </Flex>
-                    </Group>
+                    </Flex>
 
                 </Card>
 

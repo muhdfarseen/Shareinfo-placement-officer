@@ -24,9 +24,9 @@ export const LoginPlacementOfficer = () => {
 
   return (
     <div>
-      <Flex h={"100vh"} wrap={"wrap"} justify={"center"} align={"center"}>
+      <Flex h={"100dvh"} wrap={"wrap"} justify={"center"} align={"center"}>
         <Image
-          h={"100vh"}
+          h={"100dvh"}
           w={{ base:"0%", xs: "0%", sm: "30%" }}
           src={PlacementOfficerLoginImage}
           alt="Image"

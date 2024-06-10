@@ -55,34 +55,33 @@ export const Announcements = () => {
 
       <Flex wrap={"wrap"} gap={40}>
 
-        <Flex flex={1} w={{ base:"100%", xs: "100%", sm: "45%" }} direction={"column"} gap={20}>
+        <Flex flex={1} direction={"column"} gap={20}>
           <Title order={5}>Create An Announcement</Title>
           <TextInput
             label="Announcement Title"
-            placeholder="Enter the announcement title here!"
+            placeholder="announcement title"
           />
           <Textarea
             label="Description (Optional)"
-            placeholder="Enter the announcement description here!"
+            placeholder="description"
             autosize
             minRows={5}
           />
           <Flex gap={20} align={'flex-end'}>
             <FileInput
-              w={"90%"}
+              flex={1}
               leftSection={<IconCloudUpload style={{ width: rem(18), height: rem(18) }} stroke={1.5} />}
-              label="Supportive Icon (optional)"
+              label="Supportive Icon"
               placeholder="Upload"
               leftSectionPointerEvents="none"
             />
-            <Button fullWidth>
-              Publish Announcement
+            <Button flex={1} >
+              Publish
             </Button>
           </Flex>
         </Flex>
 
-
-        <Flex w={{ base:"100%", xs: "100%", sm: "45%" }} direction={"column"} >
+        <Flex flex={1} direction={"column"} >
           <Title order={5}>Recent Announcements</Title>
           <ScrollArea h={"70vh"} pr={20} pb={20}>
             {RecentAnnouncementsData.map((announcement, index) => (
@@ -90,21 +89,17 @@ export const Announcements = () => {
                 <Group align='center'>
                   <Image radius={"500"} w={70} h={70} src={announcement.ImgUrl} />
                   <Flex direction={"column"}>
-                    <Title order={5}>{announcement.Title}</Title>
-                    <Text>{announcement.Date}</Text>
+                    <Title order={6}>{announcement.Title}</Title>
+                    <Text size='xs' >{announcement.Date}</Text>
                   </Flex>
                 </Group>
-                <Text mt={10} c={"dimmed"}>{announcement.Desc}</Text>
+                <Text size='sm' mt={10} c={"dimmed"}>{announcement.Desc}</Text>
               </Card>
             ))}
           </ScrollArea>
         </Flex>
 
       </Flex>
-
-
-
-
     </div>
   )
 }
