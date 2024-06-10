@@ -68,36 +68,39 @@ export const Trainings = () => {
         {TrainingsCardData.map((training, index) => (
           <Card mb={20} key={index} withBorder radius={"lg"}>
 
-            <Flex justify={"space-between"}>
               <Flex gap={20}>
+                
                 <Image radius={"md"} h={90} w={90} src={training.Imgurl} />
+                <Flex flex={1} wrap={"wrap"} justify={"space-between"} gap={20}>
                 <Flex gap={10} direction={"column"}>
+
                   <Title order={5} >{training.TrainingTitle}</Title>
                   <Group>
 
-                    <Badge radius={"sm"} variant='light'>{training.From} - {training.To}</Badge>
-                    <Badge color='green' variant='light' radius={"sm"} >{training.Batch.join(", ")}</Badge>
+                    <Badge size='sm' radius={"sm"} variant='light'>{training.From} - {training.To}</Badge>
+                    <Badge size='sm' color='green' variant='light' radius={"sm"} >{training.Batch.join(", ")}</Badge>
 
                   </Group>
                   <Group>
-
-                    <Pill radius={"sm"}>
+                    <Pill size='xs' radius={"sm"}>
                       <b>{training.FacultyName}</b> {training.FacultyQualification}
                     </Pill>
-
                   </Group>
-                </Flex>
-              </Flex>
 
-              <Group>
-                <ActionIcon size="xl" radius="lg" variant="light" aria-label="Settings">
-                  <IconFolderCog style={{ width: '70%', height: '70%' }} stroke={1.5} />
-                </ActionIcon>
-                <ActionIcon color='red' size="xl" radius="lg" variant="light" aria-label="Settings">
-                  <IconTrash style={{ width: '70%', height: '70%' }} stroke={1.5} />
-                </ActionIcon>
-              </Group>
-            </Flex>
+                </Flex>
+                
+
+                <Group>
+                  <ActionIcon size="xl" radius="lg" variant="light" aria-label="Settings">
+                    <IconFolderCog style={{ width: '70%', height: '70%' }} stroke={1.5} />
+                  </ActionIcon>
+                  <ActionIcon color='red' size="xl" radius="lg" variant="light" aria-label="Settings">
+                    <IconTrash style={{ width: '70%', height: '70%' }} stroke={1.5} />
+                  </ActionIcon>
+                </Group>
+                </Flex>
+
+              </Flex>
 
           </Card>
         ))}

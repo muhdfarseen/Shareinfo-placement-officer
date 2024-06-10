@@ -53,8 +53,9 @@ export const Announcements = () => {
       <Title order={3}>Announcements</Title>
       <Divider my="md" />
 
-      <Flex gap={40}>
-        <Flex w={"60%"} direction={"column"} gap={20}>
+      <Flex wrap={"wrap"} gap={40}>
+
+        <Flex flex={1} w={{ base:"100%", xs: "100%", sm: "45%" }} direction={"column"} gap={20}>
           <Title order={5}>Create An Announcement</Title>
           <TextInput
             label="Announcement Title"
@@ -71,7 +72,7 @@ export const Announcements = () => {
               w={"90%"}
               leftSection={<IconCloudUpload style={{ width: rem(18), height: rem(18) }} stroke={1.5} />}
               label="Supportive Icon (optional)"
-              placeholder="Upload a supportive Icon here !"
+              placeholder="Upload"
               leftSectionPointerEvents="none"
             />
             <Button fullWidth>
@@ -81,7 +82,7 @@ export const Announcements = () => {
         </Flex>
 
 
-        <Flex w={"40%"} direction={"column"} >
+        <Flex w={{ base:"100%", xs: "100%", sm: "45%" }} direction={"column"} >
           <Title order={5}>Recent Announcements</Title>
           <ScrollArea h={"70vh"} pr={20} pb={20}>
             {RecentAnnouncementsData.map((announcement, index) => (

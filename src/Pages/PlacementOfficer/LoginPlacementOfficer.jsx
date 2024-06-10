@@ -24,19 +24,16 @@ export const LoginPlacementOfficer = () => {
 
   return (
     <div>
-      <Flex h={"100vh"} justify={"center"} align={"center"}>
+      <Flex h={"100vh"} wrap={"wrap"} justify={"center"} align={"center"}>
         <Image
           h={"100vh"}
-          w={{ xs: "0%", sm: "30%" }}
+          w={{ base:"0%", xs: "0%", sm: "30%" }}
           src={PlacementOfficerLoginImage}
           alt="Image"
         />
-        <Flex w={"70%"} justify={"center"} align={"center"} p={"lg"}>
-          <Flex direction={"column"} w={{ xs: "300", sm: "450" }} gap={20}>
+        <Flex w={"70%"} justify={"center"} align={"center"} >
+          <Flex direction={"column"} w={{ base:"300", xs: "300", sm: "450" }} gap={20}>
             <Title order={2}>Sign in to shareinfo</Title>
-           
-
-            
 
             <Input.Wrapper label="Username or Email">
               <Input radius={"xl"} />

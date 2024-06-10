@@ -148,21 +148,21 @@ export const Placements = () => {
               </Flex>
             </Group>
             <Group mt={10} grow>
-              <Badge size='lg' radius={"sm"} variant='outline' color='red'>
+              <Badge size='sm' radius={"sm"} variant='outline' color='red'>
                 {element.Date}
               </Badge>
-              <Badge size='lg' radius={"sm"} variant='outline' color='green'>
+              <Badge size='sm' radius={"sm"} variant='outline' color='green'>
                 {element.Package}
               </Badge>
-              <Badge size='lg' radius={"sm"} variant='outline' color='green'>
+              <Badge size='sm' radius={"sm"} variant='outline' color='green'>
                 {element.CGPAcuttoff}
               </Badge>
             </Group>
             <Group grow mt={10}>
-              <Badge size='lg' radius={"sm"} variant='default' color='gray'>
+              <Badge size='sm' radius={"sm"} variant='default' color='gray'>
                 {element.PreferedBatch}
               </Badge>
-              <Badge size='lg' radius={"sm"} variant='default' color='gray'>
+              <Badge size='sm' radius={"sm"} variant='default' color='gray'>
                 {element.NoofApplicant}
               </Badge>
             </Group>

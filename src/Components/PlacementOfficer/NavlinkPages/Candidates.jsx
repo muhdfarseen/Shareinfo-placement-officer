@@ -43,15 +43,14 @@ export const Candidates = () => {
 
   return (
     <div>
-      <Flex justify={"space-between"}>
+      <Flex wrap={"wrap"} justify={"space-between"}>
         <Title pl={10} order={3}>Candidates</Title>
         <Button radius={"md"} leftSection={<IconSquareRoundedPlus size={20} />}>
           Add New Candidate
         </Button>
-
       </Flex>
 
-      <Flex gap={20} justify={"space-between"}>
+      <Flex wrap={"wrap"} gap={20} justify={"space-between"}>
 
         <Flex wrap={"wrap"} pl={10} direction={"column"} gap={15} mt={20}>
           {DeptData.map((item, index) => (
@@ -59,11 +58,12 @@ export const Candidates = () => {
               key={index}
               className={`${classes.hoverScale} ${item.DeptName === activeDept ? classes.activeCard : ""}`}
               radius={"lg"}
+              
               bg={` ${item.DeptName === activeDept ? "white" : "light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6))"}`}
               onClick={() => handleCardClick(item.DeptName)}
             >
               <Flex gap={10} direction={"row"} justify={"space-between"} align={"center"} >
-                <Badge leftSection={<IconBuilding size={16} />} variant="transparent" color="gray" size="md">{item.DeptName}</Badge>
+                <Badge leftSection={<IconBuilding size={16} />} variant="transparent" color="gray" size="sm">{item.DeptName}</Badge>
                 <Badge
                   size="lg"
                   radius={"md"}
